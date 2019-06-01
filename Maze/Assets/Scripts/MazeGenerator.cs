@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class MazeGenerator : MonoBehaviour
 {
-    // 迷宮
+    // 迷路
     private Maze maze;
-    // 迷宮の行と列
+    // 迷路の行と列
     public int mazeRow = 5;
     public int mazeColumn = 5;
 
-    // 迷宮の構成部分
+    // 迷路の構成部分
     public GameObject mazeFloor;
     public GameObject mazeWall_Horizontal;
     public GameObject mazeWall_Vertical;
@@ -22,7 +22,7 @@ public class MazeGenerator : MonoBehaviour
         System.Random rnd = new System.Random();
         //スタートセル
         Vector2Int startPos = new Vector2Int(rnd.Next(0, mazeRow - 1), rnd.Next(0, mazeColumn - 1));
-        //迷宮生成
+        //迷路生成
         maze = new Maze(mazeRow, mazeColumn, mazeFloor, mazeWall_Horizontal, mazeWall_Vertical);
         maze.Generate(mazeRow, mazeColumn, startPos);
     }

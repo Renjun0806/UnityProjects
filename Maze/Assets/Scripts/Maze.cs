@@ -27,12 +27,12 @@ public class Maze : MonoBehaviour
     private int MAX_ROW;
     private int MAX_COLUMN;
 
-    // 迷宮の構成部分
+    // 迷路の構成部分
     public GameObject _Floor;
     public GameObject _Wall_Horizontal;
     public GameObject _Wall_Vertical;
 
-    //迷宮生成利用変数
+    //迷路生成利用変数
     //訪問状態保存配列
     int[,] VISITED;
 
@@ -86,7 +86,7 @@ public class Maze : MonoBehaviour
         }
     }
 
-    // 迷宮生成
+    // 迷路生成
     public void Generate(int row, int column, Vector2Int startPos)
     {
         //乱数生成変数
@@ -96,7 +96,7 @@ public class Maze : MonoBehaviour
         int x = startPos.x;
         int y = startPos.y;
 
-        //迷宮作成
+        //迷路作成
         VISITED[x, y] = 1;
         //セルの壁をリストに追加
         AddWallList(x, y);
